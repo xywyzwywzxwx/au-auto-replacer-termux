@@ -5,7 +5,6 @@ Normally after replacing this file, Amoung Us will riplace it back, but with thi
 * Termux
 * Installed to Termux Python 3
 ## Install and run
-* Install Termux
 * Copy and paste this to Termux:
 ```
 pkg install git python
