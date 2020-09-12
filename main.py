@@ -17,8 +17,8 @@ while True:
 dir1 = './'
 dir2 = '/sdcard/Android/data/com.innersloth.spacemafia/files/'
 
-file1 = './secureNew'
-file2 = '/sdcard/Android/data/com.innersloth.spacemafia/files/secureNew'
+file1 = dir1 + 'secureNew'
+file2 = dir2 + 'secureNew'
 
 
 # Checking needed files and folders exists
