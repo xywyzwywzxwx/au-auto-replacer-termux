@@ -3,7 +3,7 @@ import time
 import filecmp
 from shutil import which, copyfile
 
-
+print("Running...")
 # Check if have access to sdcard
 while True:
   if not os.access('/sdcard/', os.W_OK):
@@ -31,4 +31,5 @@ while True:
   os.system(f"touch {file2}")
   if not filecmp.cmp(file1, file2):
     copyfile(file1, file2)
+    print("File replaced")
   time.sleep(0.25)
