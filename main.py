@@ -1,15 +1,15 @@
-import os
-import time
-import filecmp
+from os import access, W_OK, path, system
+from time import sleep
+from filecmp import cmp
 from shutil import which, copyfile
 
 print("Running...")
 # Check if have access to sdcard
 while True:
-  if not os.access('/sdcard/', os.W_OK):
-    os.system('termux-setup-storage')
+  if not access('/sdcard/', W_OK):
+    system('termux-setup-storage')
     
-  if os.access('/sdcard/', os.W_OK):
+  if access('/sdcard/', W_OK):
     break
 
 
@@ -22,14 +22,14 @@ file2 = '/sdcard/Android/data/com.innersloth.spacemafia/files/secureNew'
 
 
 # Checking needed files and folders exists
-if not os.path.exists(dir2):
+if not path.exists(dir2):
   exit("Error: Not found Among Us data on path", dir2)
 
 
 # Replacing file 
 while True:
-  os.system(f"touch {file2}")
-  if not filecmp.cmp(file1, file2):
+  system(f"touch {file2}")
+  if not cmp(file1, file2):
     copyfile(file1, file2)
     print("File replaced")
   time.sleep(0.25)
