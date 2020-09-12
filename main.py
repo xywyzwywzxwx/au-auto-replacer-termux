@@ -32,4 +32,4 @@ while True:
   if not cmp(file1, file2):
     copyfile(file1, file2)
     print("File replaced")
-  time.sleep(0.25)
+  sleep(0.25)
